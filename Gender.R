@@ -17,6 +17,7 @@ colnames(df)
 ###################### Step 3 ############################################################
 # indicate dummy whether it ends with datter 
 df$woman <- as.integer(grepl("datter|dtr\\.", df$eier_bruker, ignore.case = TRUE))
+
 # check: 
 table(df$woman)
 
@@ -53,6 +54,9 @@ table(df$woman)
 unique(first[before == 0 & df$woman == 1]) 
 
 table(df$woman)
+
+################## Step 7 ############################################################
+# with patronymics : https://www.norwaydna.no/gedcoms-and-genealogy/norwegian-names-en/
 
 
 
